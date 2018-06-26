@@ -1,0 +1,19 @@
+<div class="container article-header">
+
+  <span class="article-title"><%= @article.title %></span>
+
+  <div class="icons">
+    <%= link_to edit_article_path(@article), class: "editoptions" do %>
+      <i class='far fa-edit'></i>
+    <% end %>
+
+
+    <%= link_to article_path(@article), class: "editoptions", method: :delete, data: { confirm: "Are you sure?" } do %>
+      <i class='far fa-trash-alt'></i>
+    <% end %>
+  </div>
+</div>
+<hr>
+
+<p><span class="content"><%= @article.content %></span></p>
+
